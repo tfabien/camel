@@ -65,6 +65,8 @@ Tips: It's possible to run JUnit4 & JUnit5 based camel tests side by side includ
 * `TestSupport` static methods should be imported where needed, for instance `import static org.apache.camel.test.junit5.TestSupport.assertIsInstanceOf`
 * Usage of the field `CamelTestSupport.log` should be replaced by another logger, for instance `org.slf4j.LoggerFactory.getLogger(MyCamelTest.class);`
 * Usage of the method `CamelTestSupport.createRegistry` should be replaced by `CamelTestSupport.createCamelRegistry()`
+* Usage of methods `CamelTestSupport.*Directory` should be replaced by `TestSupport.*Directory`
+* Usage of methods `CamelTestSupport.assert*` should be replaced by `TestSupport.assert*`
 * Overrides of `isCreateCamelContextPerClass()` returning `false` should be removed
 * Overrides of `isCreateCamelContextPerClass()` returning `true` should be replaced by `@TestInstance(Lifecycle.PER_CLASS)`
 
